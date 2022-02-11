@@ -37,7 +37,7 @@ public class SparseTable { // works best for range minimum, maximum, gcd queries
         }
     }
 
-    public int query(int left, int right) {
+    public int query(int left, int right) { // O(1)
         int len = right - left + 1;
         int log = binLog[len];
         return Math.min(sparseTable[left][log], sparseTable[right - (1 << log) + 1][log]);
