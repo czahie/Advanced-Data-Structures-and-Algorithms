@@ -38,6 +38,7 @@ public class SegmentTree { // range query for sum, min, max, gcd, lcm, and more 
     }
 
     public void update(int arrIdx, int val) {
+        nums[arrIdx] = val;
         update(arrIdx, val, 1, 0, n - 1);
     }
 
